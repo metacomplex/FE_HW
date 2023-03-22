@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DVD Screensaver Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dvd-logo logo-1"></div>
+  <div class="dvd-logo logo-2"></div>
+  <div class="dvd-logo logo-3"></div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DVD Screensaver Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="laser-audio">
+    <source src="laser.mp3" type="audio/mp3">
+    <source src="laser.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="dvd-logo logo-1"></div>
+  <div class="dvd-logo logo-2"></div>
+  <div class="dvd-logo logo-3"></div>
+  <script>
+    function playLaserSound() {
+      var audio = document.getElementById("laser-audio");
+      audio.currentTime = 0;
+      audio.play();
+    }
+    document.querySelector(".logo-1").addEventListener("animationiteration", playLaserSound);
+    document.querySelector(".logo-2").addEventListener("animationiteration", playLaserSound);
+    document.querySelector(".logo-3").addEventListener("animationiteration", playLaserSound);
+  </script>
+</body>
+</html>
